@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "lint": "stylelint ./**/*.scss",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "build": "node src/scripts/build.js"
   },
-
-
   "keywords": [],
   "author": "Basem",
   "license": "ISC",
   "dependencies": {
+    "node-sass": "^8.0.0",
     "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
