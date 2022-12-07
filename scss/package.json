@@ -1,0 +1,27 @@
+{
+  "name": "@dse/scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "stylelint ./**/*.scss",
+    "lint:fix": "yarn lint --fix"
+  },
+
+
+  "keywords": [],
+  "author": "Basem",
+  "license": "ISC",
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "stylelint": "^14.16.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-prettier": "^2.0.0"
+  }
+}
