@@ -1,4 +1,5 @@
 const Fs = require("fs");
+const Path = require("path");
 const Sass = require("node-sass");
 
 const getComponents = () => {
@@ -7,12 +8,14 @@ const getComponents = () => {
   const types = ["atoms", "molecules", "organisms"];
 
   types.forEach((type) => {
-    const allFiles = Fs.readdirSync(`src/${type}`).map((file) => ({
-      input: `src/${type}/${file}`,
-      output: `src/lib/${file.slice(0, -4) + "css"}`,
-    }));
+    try {
+      const allFiles = Fs.readdirSync(`src/${type}`).map((file) => ({
+        input: `src/${type}/${file}`,
+        output: `src/lib/${file.slice(0, -4) + "css"}`,
+      }));
 
-    allComponents = [...allComponents, ...allFiles];
+      allComponents = [...allComponents, ...allFiles];
+    } catch (error) {}
   });
 
   return allComponents;
