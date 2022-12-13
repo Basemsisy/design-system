@@ -2,7 +2,7 @@
   "name": "@dse/react",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "main": "lib/index.js",
   "author": "basem",
   "license": "MIT",
   "devDependencies": {
